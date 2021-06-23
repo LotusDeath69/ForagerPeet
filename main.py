@@ -14,7 +14,7 @@ async def on_ready():
     send_pictures.start()
 
 
-@tasks.loop(seconds=5)
+@tasks.loop(hours=24)
 async def send_pictures():
     channel = await client.fetch_channel(834843660214468669)
     num = randint(0, len(images)) - 1
