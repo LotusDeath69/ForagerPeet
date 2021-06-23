@@ -5,7 +5,7 @@ from random import randint
 token = 'bot token here'
 prefix = '$'
 client = commands.Bot(command_prefix=prefix, help_command=None)
-
+channel = 'The channel ID of the channel you want the bot to send the pictures to here'
 
 @client.event
 async def on_ready():
@@ -15,7 +15,7 @@ async def on_ready():
 
 @tasks.loop(hours=24)
 async def send_pictures():
-    channel = await client.fetch_channel(834843660214468669)
+    channel = await client.fetch_channel(int(channel))
     num = randint(0, len(images)) - 1
     await channel.send(images[num])
     
