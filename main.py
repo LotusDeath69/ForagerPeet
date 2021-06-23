@@ -2,8 +2,7 @@ import discord
 from discord.ext import commands, tasks
 from pictures import images
 from random import randint
-from time import sleep
-from secrets import token
+token = 'bot token here'
 prefix = '$'
 client = commands.Bot(command_prefix=prefix, help_command=None)
 
