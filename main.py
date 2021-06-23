@@ -2,10 +2,11 @@ import discord
 from discord.ext import commands, tasks
 from pictures import images
 from random import randint
-token = 'bot token here'
 prefix = '$'
 client = commands.Bot(command_prefix=prefix, help_command=None)
 channel = 'The channel ID of the channel you want the bot to send the pictures to here'
+token = 'bot token here'
+
 
 @client.event
 async def on_ready():
